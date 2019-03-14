@@ -1,8 +1,11 @@
 const mutations = {
-  async createItem(parent, args, ctx, info) {
+  createItem(parent, args, ctx, info) {
     // TODO: Check if they are logged in
-    const item = await ctx.db.mutation.createItem({ data: { ...args } }, info)
-    return item
+    return ctx.db.mutation.createItem({ data: { ...args } }, info)
+  },
+  updateItem(parent, args, ctx, info) {
+    const { id, ...item } = args
+    return ctx.db.mutation.updateItem({ data: item, where: { id } }, info)
   }
 };
 

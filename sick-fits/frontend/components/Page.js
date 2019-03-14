@@ -31,13 +31,16 @@ injectGlobal`
     font-weight: normal;
     font-style: normal;
   }
+
   html {
     box-sizing: border-box;
     font-size: 10px;
   }
+
   *, *::before, *::after {
     box-sizing: inherit;
   }
+
   body {
     padding: 0;
     margin: 0;
@@ -45,6 +48,7 @@ injectGlobal`
     line-height: 2;
     font-family: 'radnika_next'
   }
+
   a {
     text-decoration: none;
     color: ${theme.black};

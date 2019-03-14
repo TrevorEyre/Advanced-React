@@ -1,7 +1,5 @@
-import Link from 'next/link'
+import Items from '../components/Items'
 
-const Home = props => (
-  <h1>Home!</h1>
-)
+const Home = () => <Items />
 
 export default Home
